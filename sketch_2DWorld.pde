@@ -1,6 +1,7 @@
 ArrayList<Duck> ducks = new ArrayList<Duck>();
 ArrayList<Ring> rings = new ArrayList<Ring>();
-Island[] islands = new Island[5];
+ArrayList<Plant> plants = new ArrayList<Plant>();
+Island[] islands = new Island[6];
 
 color sea = color(43, 109, 214);
 //Kvaliteten af den bølgelignenden bevægelse i baggrunden. Mindre værdier = højere opløsning = mere lag.
@@ -36,6 +37,9 @@ void draw() {
     r.display();
     r.move();
   }
+  for(Plant p : plants) {
+    p.display();
+  }
 }
 
 void drawSea() {
@@ -68,9 +72,9 @@ void mousePressed() {
   
   if(isOnIsland(mouseX, mouseY, 0)) {
     if(mouseButton == LEFT)
-      rings.add(new Ring(mouseX, mouseY));
+      plants.add(new Tree(mouseX, mouseY));
     if(mouseButton == RIGHT)
-      ducks.add(new Duck(mouseX, mouseY));
+      plants.add(new Flower(mouseX, mouseY));
   }
   else {
     if(mouseButton == LEFT)
