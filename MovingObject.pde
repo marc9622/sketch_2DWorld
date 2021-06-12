@@ -21,7 +21,6 @@ class MovingObject extends Object {
     bounceFromWall();
     x += dirX * speed;
     y += dirY * speed;
-    println(dirX + " " + dirY);
   }
   
   void bounceFromWall() {
