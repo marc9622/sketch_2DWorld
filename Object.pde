@@ -11,9 +11,5 @@ class Object {
     this.size = size;
   }
   
-  void display() {
-
-  }
-  
-
+  void display() {}
 }
